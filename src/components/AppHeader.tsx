@@ -8,7 +8,7 @@ export type EncodingLockReason = "loading" | "saving" | "dirty";
 const LOCK_REASON_HINT: Record<EncodingLockReason, string> = {
   loading: "正在解析目录，等待完成后再切换编码",
   saving: "正在保存修改，等待写入完成后再切换编码",
-  dirty: "存在未保存修改，请先保存或还原再切换编码"
+  dirty: "存在未保存修改，请先保存或还原再切换编码",
 };
 
 interface AppHeaderProps {
@@ -30,12 +30,10 @@ export function AppHeader(props: AppHeaderProps) {
     <header className="app-header">
       <div className="app-header-inner">
         <div className="brand-block">
-          <div className="brand-mark" aria-hidden>
-            DNF
-          </div>
-          <div className="brand-copy">
-            <div className="brand-title">Equipment 编辑器</div>
-            <div className="brand-subtitle">本地装备文件可视化工作台</div>
+          <div className="brand-title">DNF Equipment Editor </div>
+          <div className="brand-subtitle">
+            纯前端读取本地 equipment 目录，解析 equipment.lst 与对应 .equ
+            文件，提供便捷编辑/批量编辑功能。
           </div>
         </div>
         <div className="header-actions">
@@ -47,7 +45,10 @@ export function AppHeader(props: AppHeaderProps) {
                 value={props.encoding}
                 disabled={props.encodingLockReason !== null}
                 onChange={props.onEncodingChange}
-                options={encodingOptions.map((option) => ({ value: option.value, label: option.label }))}
+                options={encodingOptions.map((option) => ({
+                  value: option.value,
+                  label: option.label,
+                }))}
                 style={{ minWidth: 200 }}
               />
             </div>

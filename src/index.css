@@ -123,44 +123,7 @@ body {
 
 .brand-block {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  min-width: 0;
-}
-
-.brand-mark {
-  position: relative;
-  display: grid;
-  width: 36px;
-  height: 36px;
-  place-items: center;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #1e1b4b 0%, #4338ca 55%, #6366f1 100%);
-  color: #ffffff;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  box-shadow:
-    0 6px 16px -6px rgba(67, 56, 202, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.18);
-}
-
-.brand-mark::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.2),
-    transparent 60%
-  );
-  pointer-events: none;
-}
-
-.brand-copy {
-  min-width: 0;
-  line-height: 1.2;
+  flex-direction: column;
 }
 
 .brand-title {

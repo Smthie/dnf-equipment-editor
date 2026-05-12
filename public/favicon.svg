@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="DNF Equipment Editor">
+  <defs>
+    <linearGradient id="bg" x1="12" y1="8" x2="52" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4338ca" />
+      <stop offset="0.55" stop-color="#2563eb" />
+      <stop offset="1" stop-color="#0f766e" />
+    </linearGradient>
+    <linearGradient id="edge" x1="18" y1="14" x2="45" y2="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f8fafc" />
+      <stop offset="1" stop-color="#c7d2fe" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)" />
+  <path
+    d="M32 12 48 18v12c0 10.7-6.3 17.9-16 22-9.7-4.1-16-11.3-16-22V18l16-6Z"
+    fill="#eef2ff"
+    stroke="url(#edge)"
+    stroke-width="2.5"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M25 24h14M23 31h18M25 38h10"
+    fill="none"
+    stroke="#312e81"
+    stroke-width="3.5"
+    stroke-linecap="round"
+  />
+  <path
+    d="m37.5 42.2 11.6-11.6 4.3 4.3-11.6 11.6-6.1 1.8 1.8-6.1Z"
+    fill="#fbbf24"
+    stroke="#713f12"
+    stroke-width="2"
+    stroke-linejoin="round"
+  />
+  <path d="m46.5 33.2 4.3 4.3" stroke="#713f12" stroke-width="2" stroke-linecap="round" />
+</svg>
