@@ -8,8 +8,9 @@ import { Button, Form, Input, Select, Space } from "antd";
 import {
   attachTypeOptions,
   equipmentTypeOptions,
-  rarityOptions,
+  rarityFilterOptions,
 } from "../domain/equipmentOptions";
+import { EMPTY_FILTER_VALUE } from "../domain/filter";
 import type { EquipmentFilters } from "../domain/filter";
 
 interface FilterToolbarProps {
@@ -30,7 +31,7 @@ interface EquipmentFilterFormProps {
   onFilterChange: (field: keyof EquipmentFilters, value: string) => void;
 }
 
-const emptyFilterOption = { value: " ", label: "空值" };
+const emptyFilterOption = { value: EMPTY_FILTER_VALUE, label: "空值" };
 
 export function FilterToolbar(props: FilterToolbarProps) {
   return (
@@ -117,7 +118,7 @@ export function EquipmentFilterForm(props: EquipmentFilterFormProps) {
           placeholder="全部"
           options={[
             emptyFilterOption,
-            ...rarityOptions.map((option) => ({
+            ...rarityFilterOptions.map((option) => ({
               value: option.value,
               label: option.label,
             })),

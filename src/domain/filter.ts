@@ -1,3 +1,4 @@
+import { MAGIC_SEALED_RARITY_FILTER_VALUE } from "./equipmentOptions";
 import { normalizeLineValue } from "./equipmentFile";
 import type { EquipmentFields } from "./equipmentFile";
 import type { EquipmentRow } from "./equipmentRow";
@@ -12,6 +13,8 @@ export interface EquipmentFilters {
   creationRate: string;
   grade: string;
 }
+
+export const EMPTY_FILTER_VALUE = " ";
 
 export const initialFilters: EquipmentFilters = {
   id: "",
@@ -49,7 +52,7 @@ export function filterEquipmentRows(
     return (
       matchesText(row.id, filters.id) &&
       includesText(fields.name, filters.name) &&
-      matchesToken(fields.rarity, filters.rarity) &&
+      matchesRarity(row, fields.rarity, filters.rarity) &&
       matchesToken(fields.equipmentType, filters.equipmentType) &&
       matchesToken(fields.attachType, filters.attachType) &&
       matchesText(fields.minimumLevel, filters.minimumLevel) &&
@@ -57,6 +60,17 @@ export function filterEquipmentRows(
       matchesText(fields.grade, filters.grade)
     );
   });
+}
+
+function matchesRarity(row: EquipmentRow, rawValue: string, filterToken: string) {
+  if (filterToken === MAGIC_SEALED_RARITY_FILTER_VALUE) {
+    return (
+      row.kind === "ok" &&
+      row.hasRandomOption &&
+      normalizeLineValue(rawValue) === "2"
+    );
+  }
+  return matchesToken(rawValue, filterToken);
 }
 
 function includesText(value: string, query: string) {

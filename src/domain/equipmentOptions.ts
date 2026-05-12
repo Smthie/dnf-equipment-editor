@@ -11,6 +11,15 @@ export const rarityOptions = [
   { value: "7", label: "神话" }
 ] as const;
 
+export const MAGIC_SEALED_RARITY_FILTER_VALUE = "__magic_sealed__";
+
+export const rarityFilterOptions = [
+  rarityOptions[0],
+  rarityOptions[1],
+  { value: MAGIC_SEALED_RARITY_FILTER_VALUE, label: "魔法封印" },
+  ...rarityOptions.slice(2)
+] as const;
+
 export const attachTypeOptions = [
   { value: "[free]", label: "不限制" },
   { value: "[sealing]", label: "封装" },
