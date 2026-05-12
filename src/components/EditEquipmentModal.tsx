@@ -24,10 +24,10 @@ interface EditFieldConfig {
 
 const EDIT_FIELDS: readonly EditFieldConfig[] = [
   { key: "name", label: "名称" },
-  { key: "rarity", label: "装备等级", options: rarityOptions },
+  { key: "rarity", label: "装备品级", options: rarityOptions },
   { key: "equipmentType", label: "装备类型", options: equipmentTypeOptions },
   { key: "attachType", label: "交易类型", options: attachTypeOptions },
-  { key: "minimumLevel", label: "使用等级" },
+  { key: "minimumLevel", label: "装备等级" },
   { key: "creationRate", label: "掉落概率" },
   { key: "grade", label: "掉落等级" }
 ];

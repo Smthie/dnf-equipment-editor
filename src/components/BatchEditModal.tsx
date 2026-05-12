@@ -64,7 +64,7 @@ export function BatchEditModal(props: BatchEditModalProps) {
         </div>
         <div className="batch-grid">
           <BatchSelectField
-            label="装备等级"
+            label="装备品级"
             checked={batchFields.rarity.enabled}
             value={batchFields.rarity.value}
             options={rarityOptions}
@@ -96,7 +96,7 @@ export function BatchEditModal(props: BatchEditModalProps) {
             onValueChange={(value) => updateBatchField("attachType", { value })}
           />
           <BatchInputField
-            label="使用等级"
+            label="装备等级"
             checked={batchFields.minimumLevel.enabled}
             value={batchFields.minimumLevel.value}
             placeholder="minimum level"

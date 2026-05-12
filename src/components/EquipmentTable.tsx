@@ -64,7 +64,7 @@ export function createEquipmentDetailColumns() {
       },
     },
     {
-      title: "装备等级",
+      title: "装备品级",
       width: 116,
       sorter: (a, b) => compareTextNumbers(rowRarity(a), rowRarity(b)),
       render: (_, row) =>
@@ -85,7 +85,7 @@ export function createEquipmentDetailColumns() {
         row.kind === "ok" ? renderAttachTag(row.fields.attachType) : "—",
     },
     {
-      title: "使用等级",
+      title: "装备等级",
       width: 92,
       sorter: (a, b) =>
         compareTextNumbers(rowField(a, "minimumLevel"), rowField(b, "minimumLevel")),

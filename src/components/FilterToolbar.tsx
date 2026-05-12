@@ -112,7 +112,7 @@ export function EquipmentFilterForm(props: EquipmentFilterFormProps) {
           onChange={(event) => props.onFilterChange("name", event.target.value)}
         />
       </Form.Item>
-      <Form.Item label="装备等级">
+      <Form.Item label="装备品级">
         <Select
           allowClear
           placeholder="全部"
@@ -159,7 +159,7 @@ export function EquipmentFilterForm(props: EquipmentFilterFormProps) {
           onChange={(value) => props.onFilterChange("attachType", value ?? "")}
         />
       </Form.Item>
-      <Form.Item label="使用等级">
+      <Form.Item label="装备等级">
         <Input
           allowClear
           placeholder="数值"
