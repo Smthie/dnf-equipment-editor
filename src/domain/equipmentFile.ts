@@ -112,9 +112,10 @@ function setFirstSectionValue(text: string, label: string, value: string) {
   }
 
   const newline = text.includes("\r\n") ? "\r\n" : "\n";
-  const base = text.replace(/(?:\r?\n)*$/, "");
+  const base = text.replace(/(?:\r\n|\n|\r)*$/, "");
   const block = `[${label}]${newline}${formatSectionLine(label, value, "")}`;
-  return `${base}${newline}${newline}${block}${newline}${newline}`;
+  const separator = base ? `${newline}${newline}` : "";
+  return `${base}${separator}${block}${newline}`;
 }
 
 function formatSectionLine(label: string, value: string, oldLine: string) {
