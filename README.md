@@ -14,15 +14,12 @@
 - 支持保存单行或保存全部已编辑行（按当前所选编码写回，多文件并发）
 - 支持还原单行或还原全部未保存修改
 
-## 环境要求
+## 本地开发
+
+环境要求：
 
 - Node.js 18+
 - pnpm
-- Chrome 或 Edge 等支持 File System Access API 的现代浏览器
-
-Safari 和 Firefox 当前不完整支持目录选择和本地写回能力，无法保证可用。
-
-## 安装与运行
 
 ```bash
 pnpm install
@@ -144,3 +141,7 @@ src/
   - `src/components/BatchEditModal.tsx`，如果字段支持批量编辑
   - `src/components/FilterToolbar.tsx`，如果字段支持筛选
   - `src/components/EquipmentTable.tsx`，如果字段需要表格展示或排序
+
+## License
+
+[MIT](LICENSE) © Smthie
